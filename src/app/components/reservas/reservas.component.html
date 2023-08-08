@@ -1,0 +1,43 @@
+<div class="container">
+    <form>
+        <div class="form">
+            <label for="name">Nome:</label>
+            <input type="text" required>
+        </div>
+        <div class="form">
+            <label for="date">Data de entrada:</label>
+            <input type="date" required>
+        </div>
+        <div class="form">
+            <label for="birthdate">Data de saída:</label>
+            <input type="date" required>
+        </div>
+        <div class="form">
+            <label for="name">Quantidade de pessoas:</label>
+            <input type="number" required>
+        </div>
+        <button type="submit" class="nova-reserva mat-elevation-z8" mat-stroked-button color="primary">NOVA RESERVA</button>
+    </form>
+    <div class="content" *ngFor="let item of list">
+        <mat-card class="mat-elevation-z8">
+            <p>Data de entrada: {{item.dataInicio}}</p>
+            <p>Data de saída: {{item.dataFim}}</p>
+            <mat-card-header>
+                <mat-card-title>Nome do hóspede: {{item.nomeHospede}}</mat-card-title>
+                <mat-card-subtitle>Quantidade de pessoas: {{item.quantidadePessoas}}</mat-card-subtitle>
+                <mat-toolbar class="status-reserva mat-elevation-z8">Status da reserva: <span class="status-confirmacao">{{item.status}}</span></mat-toolbar>
+            </mat-card-header>
+            <div class="actions">
+                <button mat-mini-fab color="primary" (click)="updateOneConfirm(item)">
+                    <mat-icon>done</mat-icon>
+                </button>
+                <button mat-mini-fab color="accent" (click)="updateOnePending(item)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-mini-fab color="warn" (click)="deleteOne(item)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</div>

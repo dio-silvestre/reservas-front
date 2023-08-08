@@ -1,0 +1,52 @@
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+.content{
+    width: 100%;
+}
+
+.nova-reserva{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+p{
+    text-align: end;
+    font-weight: 600;
+    color: rgb(114, 111, 111);
+    margin-bottom: 0;
+    margin-top: .5rem;
+    margin-right: 1rem;
+}
+
+.actions{
+    text-align: end;
+}
+
+.actions button{
+    margin: .5rem;
+}
+
+mat-card{
+    margin-top: .8rem;
+    padding: .1rem;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+}
+
+.status-reserva{
+    border-radius: 40px;
+}
+
+.status-confirmacao{
+    color:darkgreen;
+}
+
+.form{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
